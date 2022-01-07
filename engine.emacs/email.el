@@ -1,6 +1,6 @@
-;;; ~/Documents/primary.doom.d/engine.emacs/email.el -*- lexical-binding: t; -*-
+;; ~/Documents/primary.doom.d/engine.emacs/email.el -*- lexical-binding: t; -*-
 
-;; Sending Email
+;;; Sending Email
 
 (require 'auth-source);; probably not necessary
 (setq auth-sources '("~/.authinfo" "~/.authinfo.gpg"))
@@ -15,7 +15,7 @@
       smtpmail-smtp-service 465
       smtpmail-stream-type 'ssl)
 
-;; Debug
+;;; Debug
 (setq smtpmail-debug-info t)
 (setq smtpmail-debug-verb t)
 
@@ -30,7 +30,7 @@
 ;; (setq gnutls-algorithm-priority "NORMAL:%COMPAT")
 ;; (setq starttls-extra-arguments '("--priority" "NORMAL:%COMPAT"))
 ;;
-;; Reading Mail
+;;; Reading Mail
 (setq rmail-preserve-inbox t)
 ;;(setq rmail-movemail-flags '("--tls"))
 (setq rmail-primary-inbox-list

@@ -2,19 +2,30 @@
 #+DATE:    January 7, 2022
 #+SINCE:   <replace with next tagged release version>
 #+STARTUP: inlineimages nofold
-
 * 引言
 
 不给你的emacs配置起个独特名字，你就没有自己的emacs配置。
 
-起名engine-emacs是因为这些天读了一本「人类飞翔史」。
+起名engine-emacs是因为这些天读了一本书：「人类飞翔史」。
 #+attr_html: :width 200px
 [[file:images/人类飞翔史封面.png]]
 
 早先的风筝，热气球，氢气球等只能在高空中随风逐流。即使发明家制造出来螺旋状，仅靠着脚蹬手拉的人力驱动，在高空中就犹如一根竹竿搅动大海，再筋疲力尽也是徒劳无益。
 
-直到蒸汽动力引擎在工业革命中崭露头角，飞行器才得以挣脱风的束缚，按照人的意愿首次实现定向飞行。p
+直到蒸汽动力引擎在工业革命中崭露头角，飞行器才得以挣脱风的束缚，按照人的意愿首次实现定向飞行。
 
-因此，我希望Emacs能给我带来效率，作按照我的意愿前进的动力引擎egine-emacs。
+因此，我希望Emacs能给我带来效率，作按照我的意愿前进的动力引擎engine-emacs。
 
 * 简介
+
+首先，我没有自己的配置，用的doom-emacs，加了一丢点儿自己的使用习惯。这个engine-emacs项目（或者目录）就是doom-emacs的.doom.d目录。
+
+doom-emacs分为.emacs.d和.doom.d两大部分。其中.doom.d是用户自定义配置。而我也不在.emacs.d中保存任何自定义内容，自定义信息全部保存在.doom.d中，包括bookmark，snippets等。
+
+在任何时刻，将.emacs.d目录全部删掉，仅保留.doom.d，然后运行M-x doom-reload，便能全须全尾的恢复。
+
+其次，我是在windows11系统上运行的emacs，有些配置和问题是平台独有的。
+
+最后，建议用out-shine来阅读elisp的配置代码,结构清晰且赏心悦目。
+#+attr_html: :width 300px
+[[file:images/outshine案例01.png]]
