@@ -4,10 +4,10 @@
 #+STARTUP: inlineimages nofold
 * 引言
 
-不给你的emacs配置起个独特名字，你就没有自己的emacs配置。
+如果不给你的emacs配置起个独特名字，那么你就没有自己的emacs配置。
 
 起名engine-emacs是因为这些天读了一本书：「人类飞翔史」。
-#+attr_html: :width 200px
+#+attr_html: :width 300px
 [[file:images/人类飞翔史封面.png]]
 
 早先的风筝，热气球，氢气球等只能在高空中随风逐流。即使发明家制造出来螺旋状，仅靠着脚蹬手拉的人力驱动，在高空中就犹如一根竹竿搅动大海，再筋疲力尽也是徒劳无益。
@@ -18,7 +18,7 @@
 
 * 简介
 
-首先，我没有自己的配置，用的doom-emacs，加了一丢点儿自己的使用习惯。这个engine-emacs项目（或者目录）就是doom-emacs的.doom.d目录。
+首先，我没有自己的配置，用的doom-emacs，加了一丢点儿自己的使用习惯。这个engine-emacs项目（或者目录）就是doom-emacs的.doom.d目录(将本项目下载到$HOME目录下之后，需要更改命名为.doom.d)。
 
 doom-emacs分为.emacs.d和.doom.d两大部分。其中.doom.d是用户自定义配置。而我也不在.emacs.d中保存任何自定义内容，自定义信息全部保存在.doom.d中，包括bookmark，snippets等。
 
@@ -26,6 +26,37 @@ doom-emacs分为.emacs.d和.doom.d两大部分。其中.doom.d是用户自定义
 
 其次，我是在windows11系统上运行的emacs，有些配置和问题是平台独有的。
 
-最后，建议用out-shine来阅读elisp的配置代码,结构清晰且赏心悦目。
+最后，建议用outshine来阅读elisp的配置代码,结构清晰且赏心悦目。
 #+attr_html: :width 300px
 [[file:images/outshine案例01.png]]
+
+* 目录结构
+
+目录结构如下。其中init.el, package.el, config.el, custom.el为doom-emacs的标准配置文件，此处不再赘述。
+
+bookmarks-windows文件保存着我自定义的bookmarks，snippet目录里存着全部自定义的snippets，theme目录是自定义主题。
+
+engine.emacs目录里的6个文件是给config.el服务的分类配置文件。
+
+#+begin_example
+|-- init.el
+|-- packages.el
+|-- config.el
+|-- custom.el
+|-- bookmarks-windows
+|-- readme.org
+|-- engine.emacs
+|   |-- engine-org-agenda.el
+|   |-- engine-org-babel.el
+|   |-- engine-org-note.el
+|   |-- iscroll.el
+|   |-- email.el
+|   `-- programming-aid.el
+|-- images
+|-- snippets
+`-- themes
+    `-- work-theme.el
+#+end_example
+
+
+* 代码结构
