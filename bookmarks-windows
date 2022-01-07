@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("bingPictures"
+(("TodayPictures"
+ (filename . "~/Pictures/TodayPictures/")
+ (front-context-string . "0bee4d1d1342738e")
+ (rear-context-string . "13M 12-15 10:27 ")
+ (position . 242))
+("bingPictures"
  (filename . "~/AppData/Local/Microsoft/BingWallpaperApp/WPImages/")
  (front-context-string . "20220106.jpg\n  -")
  (rear-context-string . ".3M 01-06 16:27 ")
