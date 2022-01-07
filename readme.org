@@ -8,8 +8,8 @@
 不给你的emacs配置起个独特名字，你就没有自己的emacs配置。
 
 起名engine-emacs是因为这些天读了一本「人类飞翔史」。
-#+attr_html: :width 500px
-[[file:images/人类飞翔史封面.png]]
+#+attr_html: :width 200px
+[[file:images/人类飞翔史封面 (Small).png]]
 
 早先的风筝，热气球，氢气球等只能在高空中随风逐流。即使发明家制造出来螺旋状，仅靠着脚蹬手拉的人力驱动，在高空中就犹如一根竹竿搅动大海，再筋疲力尽也是徒劳无益。
 
