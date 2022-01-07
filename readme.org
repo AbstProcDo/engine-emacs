@@ -1,0 +1,11 @@
+#+TITLE: Engine Emacs
+#+DATE:    January 7, 2022
+#+SINCE:   <replace with next tagged release version>
+#+STARTUP: inlineimages nofold
+
+* 引言
+
+不给emacs配置起个独特名字，就是没有你自己的配置。
+命名Engine-Emacs是因为这些天读了一本「人类飞翔史」。早先的风筝，热气球，氢气球等只能在高空随风逐流。即使发明家制造出来螺旋状，脚蹬手拉的人力驱动，在高空中犹如一根竹竿搅动大海，筋疲力尽却徒劳无益。
+直到蒸汽动力引擎在工业革命中崭露头角，飞行器才得以挣脱风的束缚，按照人的意愿实现定向飞行。
+因此，我希望Emacs能给我带来效率，作按照我的意愿前进的动力引擎egine-emacs。
