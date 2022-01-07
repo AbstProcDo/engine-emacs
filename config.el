@@ -1,6 +1,6 @@
 ;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 ;;; 0.Key Configuration for Doom as Vanilla Emacs
-(setq evil-default-state 'emacs)
+
 ;;;; Key Change Log
 ;; 2022-01-04 Tuesday 框架化所有内容
 ;; 解决不能剪切板粘贴中文的问题
@@ -205,6 +205,34 @@
 
 
 
+;;;; 对tty和GUI设置不同的字体
+(if (display-graphic-p)
+    (progn
+      (set-face-attribute
+       'default nil
+       :font (font-spec :name "Monaco"
+                        :weight 'normal
+                        :slant 'normal
+                        :size 14.0))
+      (dolist (charset '(kana han symbol cjk-misc bopomofo))
+        (set-fontset-font
+         (frame-parameter nil 'font)
+         charset
+         (font-spec :name "STKaiti"
+                    :weight 'normal
+                    :slant 'normal
+                    :size 16.5)))
+      )
+  nil
+  ;;else (optional)
+  )
+;;;; all the icons
+(require 'all-the-icons)
+(require 'all-the-icons-dired)
+(require 'spaceline-all-the-icons)
+(require 'all-the-icons-gnus)
+(require 'all-the-icons-ivy)
+
 ;;; 4.Windows Management
 ;;;; split windows
 (defun split-window-left (&optional size)
@@ -253,6 +281,13 @@
 ;;;; Environment
 ;; 设置bash之后M-&打开文件将会失效
 ;; (setq shell-file-name "C:/Windows/system32/bash.exe")
+(setenv "ESHELL" "bash")
+
+;; ;;远程tramp
+;; (setq auto-save-disable-predicates
+;;       '((lambda f()
+;;           (tramp-tramp-file-p (buffer-file-name))
+;;           )))
 
 ;;;; Org Programming Aid
 (require 'programming-aid)
@@ -261,14 +296,6 @@
 (require 'outshine)
 (add-hook 'emacs-lisp-mode-hook 'outshine-mode)
 
-
-;;;; Environment
-(setenv "ESHELL" "bash")
-;; ;;远程tramp
-;; (setq auto-save-disable-predicates
-;;       '((lambda f()
-;;           (tramp-tramp-file-p (buffer-file-name))
-;;           )))
 
 ;;;; eshell prompts
 ;; (defun your-eshell-prompt-function ()
@@ -280,7 +307,14 @@
 
 
 
-;;;; Coding system
+;;; 8.Coding system
+;; 解决doom升级后，不能从剪切板往emacs粘贴中文的问题。
+;; 2022-01-07 Friday
+(if IS-WINDOWS
+    (set-selection-coding-system 'utf-16le-dos)
+  (set-selection-coding-system 'utf-8))
+
+
 ;; (when (fboundp 'set-charset-priority)
 ;;   (set-charset-priority 'unicode))
 ;; (prefer-coding-system        'utf-8)
@@ -290,45 +324,6 @@
 ;; (setq locale-coding-system   'utf-8)
 ;; (setq-default buffer-file-coding-system 'utf-8)
 ;; (add-to-list 'file-coding-system-alist '("\\.org\\'" . utf-8))
-
-
-
-
-;;;; 对tty和GUI设置不同的字体
-(if (display-graphic-p)
-    (progn
-      (set-face-attribute
-       'default nil
-       :font (font-spec :name "Monaco"
-                        :weight 'normal
-                        :slant 'normal
-                        :size 14.0))
-      (dolist (charset '(kana han symbol cjk-misc bopomofo))
-        (set-fontset-font
-         (frame-parameter nil 'font)
-         charset
-         (font-spec :name "STKaiti"
-                    :weight 'normal
-                    :slant 'normal
-                    :size 16.5)))
-      )
-  nil
-  ;;else (optional)
-  )
-;;;; all the icons
-(require 'all-the-icons)
-(require 'all-the-icons-dired)
-(require 'spaceline-all-the-icons)
-(require 'all-the-icons-gnus)
-(require 'all-the-icons-ivy)
-
-
-;;; 8.Coding system
-;; 解决doom升级后，不能从剪切板往emacs粘贴中文的问题。
-;; 2022-01-07 Friday
-(if IS-WINDOWS
-    (set-selection-coding-system 'utf-16le-dos)
-  (set-selection-coding-system 'utf-8))
 
 ;;; Red Alarms
 ;;;; Buffers

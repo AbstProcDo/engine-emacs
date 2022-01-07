@@ -34,7 +34,7 @@ doom-emacs分为.emacs.d和.doom.d两大部分。其中.doom.d是用户自定义
 
 目录结构如下。其中init.el, package.el, config.el, custom.el为doom-emacs的标准配置文件，此处不再赘述。
 
-bookmarks-windows文件保存着我自定义的bookmarks，snippet目录里存着全部自定义的snippets，theme目录是自定义主题。
+bookmarks-windows文件保存着自定义的bookmarks，snippet目录里存着全部自定义的snippets，theme目录是自定义主题。
 
 engine.emacs目录里的6个文件是给config.el服务的分类配置文件。
 
@@ -44,7 +44,6 @@ engine.emacs目录里的6个文件是给config.el服务的分类配置文件。
 |-- config.el
 |-- custom.el
 |-- bookmarks-windows
-|-- readme.org
 |-- engine.emacs
 |   |-- engine-org-agenda.el
 |   |-- engine-org-babel.el
@@ -52,11 +51,73 @@ engine.emacs目录里的6个文件是给config.el服务的分类配置文件。
 |   |-- iscroll.el
 |   |-- email.el
 |   `-- programming-aid.el
-|-- images
 |-- snippets
-`-- themes
-    `-- work-theme.el
+|-- themes
+|   `-- work-theme.el
+|-- images
+|-- readme.org
 #+end_example
 
+* 配置结构
 
-* 代码结构
+所有的配置都写在config.el中，暂时分了九个类别。
+
+** 0.最关键的键位模式配置
+
+doom模式是vim模式，我用的是vanilla emacs。于是这第一行配置最为关键。
+
+#+begin_src emacs-lisp :tangle yes
+(setq evil-default-state 'emacs)
+#+end_src
+
+另外也在key change log部分记录主要的变更。变更记录写在头部，比从git log中查看更加直观。
+
+** 1.Key and Editing
+
+键位绑定都放在此处，光标的移动，拼写检查，搜索，拼写纠正等等
+
+** 2.File, Buffers, Directories
+
+文件与目录相关内容，还包括register, bookmarks, dired, archive等等
+
+** 3.Display(Looks and Feel)
+
+themes, modeline, input-methods, emoj, fonts, icons等等
+
+** 4.Windows Management
+
+窗口管理与Frame管理等
+
+** 5.Org Mode
+
+我主要用emacs来写笔记，因此org-mode是核心。具体配置在
+
+#+begin_src emacs-lisp :tangle yes
+(add-to-list 'load-path "~/.doom.d/engine.emacs")
+(require 'engine-org-babel)
+(require 'engine-org-agenda)
+(require 'engine-org-note)
+(require 'email)
+(require 'iscroll)
+#+end_src
+
+** 6.Reading
+
+dictionaries, epub-reading 等
+
+** 7.Programming
+
+包括环境配置等，另有programming-aid.el分类配置。
+
+** 8.Coding system
+
+这应该在7.programming里。但在windows上，常常出现coding-system的异常报错，因此单独拿出来。
+
+** Red Alarms
+
+记录配置过程中踩的雷。
+
+* 收尾
+
+以上，
+engine-emacs，盼着每次打开，都能有强劲动力的推背感。
