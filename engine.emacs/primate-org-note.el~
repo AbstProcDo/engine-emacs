@@ -1,0 +1,101 @@
+;;; ~/Documents/primary.doom.d/engine.emacs/engine-org-note.el -*- lexical-binding: t; -*-
+;; Org Note最核心的一点是大纲结构.
+;;
+;;
+;;
+;;Initial visbility
+(setq org-startup-folded 'show2levels)
+
+;;Keys
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-switchb)
+(global-set-key "\C-c," 'org-insert-structure-template)
+;;(global-set-key (kbd "C-c C-q") 'org-set-tags-command)
+;;links
+;; internal links of org
+(setq org-link-search-must-match-exact-headline nil)
+(setq org-link-file-path-type 'relative)
+
+;;2.Docuemnt Structure
+(setq org-catch-invisible-edits t)
+
+
+;;2.2.Visibility Cycling --> org-global-cycle
+(global-set-key (kbd "C-c <tab>") #'outline-show-children)
+
+;;Plain list
+(setq org-list-demote-modify-bullet t)
+
+;;Tables
+;;添加首列
+(defun +org/table-insert-column-left () ;;question? 这种命名方式有意思
+  "Insert a new column left of the current column."
+  (interactive)
+  (org-table-insert-column)
+  (org-table-move-column-left))
+
+
+;; Captrue words
+(require 'thingatpt)
+;; 当用了rg搜索之后就不再必须。
+(defun engine-append-word ()
+  (interactive)
+  (let ((word (if (not (region-active-p))
+                  (word-at-point)
+                (buffer-substring (region-beginning) (region-end)))))
+    (with-current-buffer (find-file-noselect "~/Documents/OrgMode/ORG/Master/build-vocabulary.org")
+      (goto-char (point-max))
+      (insert word "\n")
+      (save-buffer))))
+
+;;Images
+;;
+;;live refresh inline images
+(global-set-key (kbd "C-c i i") #'org-toggle-inline-images)
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images)
+;;org-mode显示图片
+(setq org-image-actual-width nil)
+(add-hook 'org-mode-hook (lambda ()
+                           (org-display-inline-images t)))
+;;live refresh inline images
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images)
+
+;;Disable auto-fill-mode
+(add-hook 'org-mode-hook (lambda ()
+                           (auto-fill-mode -1)))
+
+
+;;------------------------------------------------------------------------
+;; Screenshot ;;总感觉不是一个正式的单词.
+;;------------------------------------------------------------------------
+
+;; Rahul Org-mode Screenshot takes a screenshot with scrot -s (waits for screen
+;; selection), saves it as orgfileopened.org_YYYYMMDD_hhmmss.png, inserts
+;; the link and turns on the display-inline-images, showing your screenshot directly
+;; to the org-file"
+(add-hook 'org-mode-hook (lambda ()
+                           (defun ros ()
+                             (interactive)
+                             (if buffer-file-name (progn (message
+                                                          "Waiting for region selection with mouse...")
+                                                         (let ((filename (concat "../images/"
+                                                                                 (file-name-nondirectory
+                                                                                  buffer-file-name)
+                                                                                 "_"
+                                                                                 (format-time-string
+                                                                                  "%Y%m%d_%H%M%S")
+                                                                                 ".png")))
+                                                           (if (executable-find "scrot")
+                                                               (call-process "scrot" nil nil nil
+                                                                             "-s" filename)
+                                                             (call-process "screencapture" nil nil
+                                                                           nil "-s" filename))
+                                                           (insert (concat "[[" filename "]]"))
+                                                           (org-display-inline-images t t))
+                                                         (message "File created and linked..."))
+                               (message "You're in a not saved buffer! Save it first!")))))
+
+(provide 'engine-org-note)
+;; end of <org-note>

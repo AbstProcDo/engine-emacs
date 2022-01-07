@@ -1,0 +1,80 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("bingPictures"
+ (filename . "~/AppData/Local/Microsoft/BingWallpaperApp/WPImages/")
+ (front-context-string . "20220106.jpg\n  -")
+ (rear-context-string . ".3M 01-06 16:27 ")
+ (position . 528))
+("RimeUser"
+ (filename . "~/AppData/Roaming/Rime/")
+ (front-context-string . "weasel.custom.ya")
+ (rear-context-string . "315 01-07 15:09 ")
+ (position . 496))
+("rime-system"
+ (filename . "c:/Program Files (x86)/Rime/weasel-0.14.3/data/")
+ (front-context-string . "bopomofo_express")
+ (rear-context-string . ".7k 2019-06-22  ")
+ (position . 150))
+("Rime"
+ (filename . "~/AppData/Roaming/Rime/")
+ (front-context-string . "default.custom.y")
+ (rear-context-string . "417 2021-06-06  ")
+ (position . 189))
+("Tech"
+ (filename . "~/Documents/OrgMode/ORG/Master/log.tech.progress.org")
+ (front-context-string . "* Pr Log\n** [[fi")
+ (rear-context-string . "ename $i); done\n")
+ (position . 31646))
+("OrgManuals"
+ (filename . "~/Documents/OrgMode/ORG/Programming/Emacs/Emacs.Org/")
+ (front-context-string . "Elisp.org\n  -rw-")
+ (rear-context-string . " 16 10-26 15:15 ")
+ (position . 168))
+("programming"
+ (filename . "~/Documents/OrgMode/ORG/Programming/")
+ (front-context-string . "Book.SICP\n  drwx")
+ (rear-context-string . "  0 01-04 14:56 ")
+ (position . 207))
+("orgBooks"
+ (filename . "~/Documents/OrgBooksProject/")
+ (front-context-string . "readme.org\n  drw")
+ (rear-context-string . "142 11-05 21:35 ")
+ (position . 258))
+("Downloads"
+ (filename . "~/Downloads/")
+ (front-context-string . "027.torrent\n  -r")
+ (rear-context-string . ".2k 12-29 19:55 ")
+ (position . 132))
+("Documents"
+ (filename . "~/Documents/")
+ (front-context-string . "OrgBooksProject\n")
+ (rear-context-string . "  0 12-28 16:14 ")
+ (position . 1108))
+("org-capture-last-stored"
+ (filename . "~/Documents/OrgMode/ORG/Master/todo.thisWeek.org")
+ (front-context-string . "*** Emacs的TG社区多数")
+ (rear-context-string . "1-07 Fri 10:19>\n")
+ (position . 37293))
+("emacs.manuals"
+ (filename . "~/Documents/OrgMode/ORG/Programming/Emacs/Emacs.Manuals/")
+ (front-context-string . "18.File-Handling")
+ (rear-context-string . ".3k 2020-08-22  ")
+ (position . 1345))
+("doom"
+ (filename . "~/Documents/windows.doom.d/")
+ (front-context-string)
+ (rear-context-string . "  0 01-05 11:32 ")
+ (position . 790))
+("Virtuoso.Emacs"
+ (filename . "~/Public/MyProjects/Master-Emacs-From-Scrach-with-Solid-Procedures/")
+ (front-context-string . "\n  -rw-rw-rw-  1")
+ (rear-context-string . "genda-by-Org.org")
+ (position . 755))
+("Master"
+ (filename . "~/Documents/OrgMode/ORG/Master/")
+ (front-context-string . "00.information.o")
+ (rear-context-string . ".9k 08-02 11:07 ")
+ (position . 214))
+)

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: table_formular
+# key: tblfm
+# --
+#+TBLFM: $6=$4*$5::@7$6=vsum(@2..@6)::@10$6=vsum(@8..@9)::@11$6=@10-@7

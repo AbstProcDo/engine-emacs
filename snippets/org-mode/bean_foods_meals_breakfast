@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: bean_foods_meals_breakfast
+# key: bbreakfast
+# condition: t
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+****** `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))` "早餐:$0"
+`(format-time-string "%Y-%m-%d" (current-time))` * ""
+           Liabilities:CreditCMB  CNY
+           Expenses:Foods:Meals:Breakfast

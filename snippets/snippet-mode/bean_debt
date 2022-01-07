@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: bean_debt
+# key: debt
+# condition: t
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+`(format-time-string "%Y-%m-%d" (current-time))` * ""
+           Assets:DebtCMB  CNY
+           Expenses:

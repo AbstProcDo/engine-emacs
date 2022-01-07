@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: bean_accounting
+# key: baccounting
+# --
+
+** `(insert-current-date)`
+*** Accounting
+**** Incomes.Business
+***** Trade
+***** Courses
+**** Expenses.Foods
+***** Meals
+***** Drinks
+***** Staple and Seasoning
+***** Fruits
+***** Vegetable
+**** Expenses.Tools
+**** Expenses.Transportation
+**** Expenses.Utilities
+**** Labors and Hours
+*** Personal_Notes
+*** Project_Notes

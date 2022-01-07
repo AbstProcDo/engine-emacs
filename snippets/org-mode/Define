@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Define
+# key: Define
+# --
++ Define:
+  $0
+- Origin:
+- Etymology:
+- Mnemonic:
+- Story:
+- Synonym:
+- Antonym:

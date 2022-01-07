@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: table_aggregate
+# key: aggregate
+# --
+
+#+BEGIN: aggregate :table "hospital_2019_09_22" :cols "费用大类 sum(总金额)"
+
+#+END:

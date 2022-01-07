@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name:post_title
+# key:post_title
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+   .. title:
+   .. slug:
+   .. date: 2019-05-15 20:53:29 UTC+08:00
+   .. tags:
+   .. category: programming
+   .. link:
+   .. description:
+   .. type: text

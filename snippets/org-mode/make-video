@@ -1,0 +1,59 @@
+# -*- mode: snippet -*-
+# name: make-video
+# key: make-video                                                             
+# --
+视频制作步骤拆解
+1. 转成MP4格式
+#+BEGIN_SRC bash :results none
+# 转成MP4格式
+DIR=~/Videos/dwhelper
+INFILE=
+cd "$DIR"
+ffmpeg -i "$INFILE" -strict experimental "${INFILE%.*}.mp4"
+#+END_SRC
+2. 裁剪内容
+#+BEGIN_SRC bash
+DIR=~/Videos/dwhelper
+INFILE=
+cd DIR
+ffmpeg -ss 00:00 -to 03:48 -i "$INFILE" -codec copy "${INFILE%.*}_trimmed.mp4"
+#+END_SRC
+3. 选封面。目的是为了获得“点击率”，有了第一波点击率才会有更多的推荐。同时也选标题。
+#+BEGIN_SRC bash :results none
+# 从多张中选取封面
+DIR=~/Videos/dwhelper
+INFILE=
+ffmpeg \
+-y \
+-i "$INFILE" \
+-ss 00:03:38 -to 00:03:48 -t 00:00:02 \
+-q:v 1 \
+"${INFILE%.*}-cover-%3d.jpg"
+#+END_SRC
+
+#+BEGIN_SRC bash
+# 选取单帧的封面
+DIR=~/Videos/dwhelper
+INFILE=
+ffmpeg \
+-ss 02:53 \
+-i $INFILE \
+-vframes 1 -q:v 1 \
+${INFILE%.*}-cover-单帧.jpg
+#+END_SRC
+
+4. 最后确定标题。垂直领域。半衰期长的文章。
+看完之后选一个标题
+
+5. 压入字幕
+#+BEGIN_SRC bash :session themes :results none
+INFILE=The-Way-of-the-Exile-trimmed.mp4
+SUBTITLES=The-Way-of-the-Exile-tc.srt
+ASS=tempRANDOM.ass # 不需要处理
+
+ffmpeg -i "$SUBTITLES" "$ASS" && \
+BITRATE=$(ffprobe -v error -select_streams v:0 -show_entries stream=bit_rate \
+-of default=noprint_wrappers=1:nokey=1 "$INFILE") && \
+ffmpeg -i $INFILE -vcodec libx265 -tag:v hvc1 \
+ -b:v "$BITRATE" -c:a copy -vf ass="$ASS" "${INFILE%.*}-burnedin.mp4"
+#+END_SRC

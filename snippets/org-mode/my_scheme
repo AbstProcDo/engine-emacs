@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: my_scheme
+# key: scheme
+# condition: t
+# --
+#+begin_src scheme :session sicp
+$0
+#+end_src

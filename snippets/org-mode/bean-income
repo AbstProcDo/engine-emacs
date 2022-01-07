@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: bean_income
+# key: bincome
+# condition: t
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+****** `(format-time-string "<%Y-%m-%d %a %H:%M>" (current-time))` " "
+`(format-time-string "%Y-%m-%d" (current-time))` * "$0"
+           Income:Trade:Xianyu  CNY
+           Assets:DebtCMB

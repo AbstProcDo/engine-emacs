@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: java_src
+# key: javac
+# --
+#+begin_src java :classname $0 :session java :results output
+
+#+end_src

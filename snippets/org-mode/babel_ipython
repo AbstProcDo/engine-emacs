@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: babel_ipython
+# key: ipython
+# --
+
+#+begin_src ipython :session $0 :results output
+
+#+end_src

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: my_shell
+# key: shell
+# --
+#+BEGIN_SRC shell :results output
+$0
+#+END_SRC

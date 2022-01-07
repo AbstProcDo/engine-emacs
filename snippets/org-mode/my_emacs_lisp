@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: my_emacs_lisp
+# key: lisp
+# condition: t
+# --
+#+begin_src emacs-lisp :session $0 :lexical t
+
+#+end_src

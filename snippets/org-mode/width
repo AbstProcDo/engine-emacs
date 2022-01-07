@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: width
+# key: pwidth
+# --
+
+#+ATTR_HTML: :width 300px

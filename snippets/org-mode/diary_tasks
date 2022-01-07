@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: diary tasks
+# key: dtasks
+# condition: t     
+# --
+**** Personal_Tasks
+**** Project_Tasks

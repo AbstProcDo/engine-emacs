@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: mysql
+# key: mysql                                        
+# --
+
+#+begin_src sql :engine mysql :dbuser org :database grocer
+$0
+#+end_src

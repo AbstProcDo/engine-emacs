@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: new-day
+# key: newday
+# --
+* `(format-time-string "%Y-%m-%d %A" (current-time))`
+** Plan
+*** TODO $0
+** HandsOn
+** Note
+** Review
