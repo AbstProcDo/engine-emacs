@@ -2,7 +2,7 @@
 #+DATE:    January 7, 2022
 #+SINCE:   <replace with next tagged release version>
 #+STARTUP: inlineimages nofold
-* 引言
+* 0.引言
 
 如果不给你的emacs配置起个独特名字，那么你就没有自己的emacs配置。
 
@@ -16,7 +16,7 @@
 
 因此，我希望Emacs能给我带来效率，作按照我的意愿前进的动力引擎engine-emacs。
 
-* 简介
+* 1.简介
 
 首先，我没有自己的配置，用的doom-emacs，加了一丢点儿自己的使用习惯。这个engine-emacs项目（或者目录）就是doom-emacs的.doom.d目录(将本项目下载到$HOME目录下之后，更改命名为.doom.d即可)。
 
@@ -30,7 +30,7 @@ doom-emacs分为.emacs.d和.doom.d两大部分。其中.doom.d是用户自定义
 #+attr_html: :width 300px
 [[file:images/outshine案例01.png]]
 
-* 目录结构
+* 2.目录结构
 
 目录结构如下。其中init.el, package.el, config.el, custom.el为doom-emacs的标准配置文件，此处不再赘述。
 
@@ -58,7 +58,7 @@ engine.emacs目录里的6个文件是给config.el服务的分类配置文件。
 |-- readme.org
 #+end_example
 
-* 配置结构
+* 3.配置结构
 
 所有的配置都写在config.el中，暂时分了九个类别。
 
@@ -117,7 +117,7 @@ dictionaries, epub-reading 等
 
 记录配置过程中踩的雷。
 
-* 收尾
+* 4.收尾
 
 以上，
 engine-emacs，盼着每次打开，都能有强劲动力的推背感。
