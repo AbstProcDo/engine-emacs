@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("TodayPictures"
+(("emacs.master"
+ (filename . "~/Documents/OrgMode/ORG/Programming/Emacs/")
+ (front-context-string . "Emacs.Manuals\n  ")
+ (rear-context-string . "  0 01-04 08:40 ")
+ (position . 703))
+("TodayPictures"
  (filename . "~/Pictures/TodayPictures/")
  (front-context-string . "0bee4d1d1342738e")
  (rear-context-string . "13M 12-15 10:27 ")
@@ -59,9 +64,9 @@
  (position . 1108))
 ("org-capture-last-stored"
  (filename . "~/Documents/OrgMode/ORG/Master/todo.thisWeek.org")
- (front-context-string . "*** Emacs的TG社区多数")
- (rear-context-string . "1-07 Fri 10:19>\n")
- (position . 37293))
+ (front-context-string . "*** 重视粉丝和用户写的每一个")
+ (rear-context-string . "的经历中寻找engine动力。\n")
+ (position . 37754))
 ("emacs.manuals"
  (filename . "~/Documents/OrgMode/ORG/Programming/Emacs/Emacs.Manuals/")
  (front-context-string . "18.File-Handling")

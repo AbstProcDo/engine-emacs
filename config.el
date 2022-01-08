@@ -11,7 +11,7 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
 (setq fns-command-modifier 'meta)
-(setq ns-option-modifier 'super)
+(setq ns-option-modifier 'super)xxxx
 
 ;;;; Moving Points
 ;; buffers

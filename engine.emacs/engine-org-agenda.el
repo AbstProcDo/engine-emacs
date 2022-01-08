@@ -267,6 +267,9 @@
   (run-at-time (concat next-hour ":00") 3600 #'announce-time))
 ;;这个函数可以在任意时间运行.
 
+;; insert org  timestamp
+(global-set-key (kbd "C-c !") 'org-time-stamp-inactive)
+(global-set-key (kbd "C-c .") 'org-time-stamp)
 
 ;; Insert timestamp
 (defun insert-current-date ()
