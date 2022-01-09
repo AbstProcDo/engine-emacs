@@ -2,7 +2,22 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("emacs.master"
+(("elisp-manuals"
+ (filename . "~/Documents/OrgMode/ORG/Programming/Emacs/Elisp.Manual/")
+ (front-context-string . "05.List.org\n  -r")
+ (rear-context-string . ".6k 2021-04-11  ")
+ (position . 517))
+("elisp"
+ (filename . "~/Documents/OrgMode/ORG/Programming/Emacs/Elisp.Manual/")
+ (front-context-string . "05.List.org\n  -r")
+ (rear-context-string . ".6k 2021-04-11  ")
+ (position . 517))
+("Public"
+ (filename . "~/Public/")
+ (front-context-string)
+ (rear-context-string . "  0 2021-04-04  ")
+ (position . 552))
+("emacs.master"
  (filename . "~/Documents/OrgMode/ORG/Programming/Emacs/")
  (front-context-string . "Emacs.Manuals\n  ")
  (rear-context-string . "  0 01-04 08:40 ")

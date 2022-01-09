@@ -11,7 +11,7 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
 (setq fns-command-modifier 'meta)
-(setq ns-option-modifier 'super)xxxx
+(setq ns-option-modifier 'super)
 
 ;;;; Moving Points
 ;; buffers
@@ -64,6 +64,9 @@
 ;;;; Searching
 ;;;;; riggrep Search
 ;; (setq counsel-rg-base-command "rg --with-filename --follow  --no-heading --line-number --color never %s")
+(after! counsel
+  (setq counsel-rg-base-command '("rg" "--max-columns" "10000" "--with-filename" "--no-heading" "--line-number" "--color" "never" "%s" "--path-separator" "/" "."))
+)
 
 ;; 报错 Error code 2的问题，在Windows上的处理方法。
 (after! counsel
